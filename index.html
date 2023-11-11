@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SCSS/style.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
     <title>Cestovka</title>
 </head>
 
@@ -26,15 +29,18 @@
 
     <section class="offer" id="Destinace">
         <div class="offer__card">
+            <img class="offer__card__image" src="IMAGES/palmy@2x.png" alt="palmy">
             <p class="offer__card__price">17 600 Kč</p>
             <h1 class="offer__card__title">Pohoda pod palmami</h1>
             <p class="offer__card__description">Nejlepší dovolená pro nejvíc nejlínější lidi na světě</p>
         </div>   
         <div class="offer__card">
+            <img class="offer__card__image" src="IMAGES/jezero2.png" alt="jezero">
             <p class="offer__card__price">8 490 Kč</p>
             <p class="offer__card__title">Klid u jezera</p>
         </div>   
         <div class="offer__card">
+            <img class="offer__card__image" src="IMAGES/nakole.png" alt="na kole">
             <p class="offer__card__price">4 990 Kč</p>
             <p class="offer__card__title">Výlet na kole</p>
         </div>
@@ -70,51 +76,56 @@
 
 
     <section class="offer" id="LastMinute">
-        <h2>Last minute zájezdy</h2>
-        <div>
-            <p>15 900 Kč</p>
-            <p>Romantika u horského jezera</p>
-            <p>Dechberoucí výhledy na horské štíty a zrcadlovou hladinu jezera.</p>
+
+        <h2 class="offer__title">Last minute zájezdy</h2>
+
+        <div class="offer__card">
+            <img class="offer__card__image" src="IMAGES/lodicka@2x.png" alt="na lodičce">
+            <p class="offer__card__price">15 900 Kč</p>
+            <p class="offer__card__title">Romantika u horského jezera</p>
+            <p class="offer__card__description">Dechberoucí výhledy na horské štíty a zrcadlovou hladinu jezera.</p>
         </div>
-        <div>
-            <p>18 500 Kč</p>
-            <p>Grand Canyon</p>
+        <div class="offer__card">
+            <img class="offer__card__image" src="IMAGES/podkova.png" alt="řeka v poušti">
+            <p class="offer__card__price">18 500 Kč</p>
+            <p class="offer__card__title">Grand Canyon</p>
         </div>
-        <div>
-            <p>8 900 Kč</p>
-            <p>Pěšky po Kanárských ostrovech</p>
+        <div class="offer__card">
+            <img class="offer__card__image" src="IMAGES/zatoka.png" alt="zatoka">
+            <p class="offer__card__price">8 900 Kč</p>
+            <p class="offer__card__title">Pěšky po Kanárských ostrovech</p>
         </div>
     </section>    
 
     <!-- Novinky -->
 
-    <section class="News" id="Novinky">
+    <section class="news" id="Novinky">
 
         <h2 class="news__title">Novinky</h2>
 
-        <div>
-            <p>15. 8. 2020</p>
-            <p>Magický Zanzibar</p>
-            <p>Zanzibar, při vyslovení jména tohoto kouzelného ostrova, se vybaví vůně exotických koření, příznivé klima, teplé moře, exotická flóra i fauna.</p>
+        <div class="news__item">
+            <p class="news__item__date">15. 8. 2020</p>
+            <p class="news__item__title">Magický Zanzibar</p>
+            <p class="news__item__description">Zanzibar, při vyslovení jména tohoto kouzelného ostrova, se vybaví vůně exotických koření, příznivé klima, teplé moře, exotická flóra i fauna.</p>
         </div>
 
-        <div>
-            <p>31. 9. 2020</p>
-            <p>Návrat českých občanů ze zahraničí</p>
-            <p>Všichni občané ČR vracející se ze zahraničí zpět se musí řídit podmínkami uvedenými v platném Ochranném opatření Ministerstva zdravotnictví ČR.</p>
+        <div class="news__item">
+            <p class="news__item__date">31. 9. 2020</p>
+            <p class="news__item__title">Návrat českých občanů ze zahraničí</p>
+            <p class="news__item__description">Všichni občané ČR vracející se ze zahraničí zpět se musí řídit podmínkami uvedenými v platném Ochranném opatření Ministerstva zdravotnictví ČR.</p>
         </div>
-        <div>
-            <p>6. 10. 2020</p>
-            <p>Na Kubu s PCR testem</p>
-            <p>Při vstupu do země se buď musíte prokázat negativním PCR testem na Covid-19, který byl proveden max. 72 hodin před příletem do destinace.</p>
+        <div class="news__item">
+            <p class="news__item__date">6. 10. 2020</p>
+            <p class="news__item__title">Na Kubu s PCR testem</p>
+            <p class="news__item__description">Při vstupu do země se buď musíte prokázat negativním PCR testem na Covid-19, který byl proveden max. 72 hodin před příletem do destinace.</p>
         </div>
 
     </section>
 
     <!-- Patička -->
 
-    <footer>
-       <p>©2021, Czechitas</p>
+    <footer class="footer">
+       <p class="footer__body">©2021, Czechitas</p>
     </footer>
 
 
