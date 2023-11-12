@@ -1,5 +1,127 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
 /* barvy */
-/*fonty
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-*//*# sourceMappingURL=style.css.map */
+body {
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+.header__logo {
+  height: 30px;
+  margin: 36px auto 10px auto;
+  display: block;
+}
+
+.main-nav {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav__item {
+  list-style-type: none;
+  padding: 20px;
+}
+.main-nav__item:hover {
+  background-color: #F03000;
+}
+.main-nav__item:hover .main-nav__link {
+  color: #FFFFFF;
+}
+.main-nav__link {
+  text-decoration: none;
+  color: #F03000;
+  font-size: 18px;
+}
+
+.offer__card {
+  position: relative;
+  margin-bottom: 20px;
+}
+.offer__card__price {
+  margin: 0;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 10px;
+  background-color: #F03000;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.offer__card:first-child .offer__card__title {
+  position: absolute;
+  bottom: 59px;
+  left: 20px;
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 600;
+}
+.offer__card:first-child .offer__card__description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #FFFFFF;
+  margin: 0;
+}
+.offer__card__title {
+  position: absolute;
+  bottom: 23px;
+  left: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.service {
+  margin: 20px 0;
+}
+.service__card {
+  margin-bottom: 10px;
+  background-color: #F0F0F0;
+  padding: 20px;
+  display: flex;
+}
+.service__card__text {
+  flex: 0 0 75%;
+}
+.service__card__figure {
+  flex: 0 0 25%;
+  justify-self: center;
+  margin: 0;
+}
+.service__card__img {
+  height: 40px;
+  margin-top: 20px;
+}
+.service__card__title {
+  color: #F03000;
+  font-size: 18px;
+}
+.service__card__descrition {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.footer {
+  background-color: #444444;
+  color: #FFFFFF;
+  text-align: center;
+  height: 60px;
+  vertical-align: center;
+}
+.footer__body {
+  margin: 0;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */

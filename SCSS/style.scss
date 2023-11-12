@@ -1,3 +1,9 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+
 /* barvy */ 
 $c-primary: #F03000;
 $c-background-secondary: #E5E5E5;
@@ -10,7 +16,148 @@ $c-grey: #80808080;
 
 $c-footer: #444444;
 
-/*fonty
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-*/
+
+$font-basic: 'Montserrat', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+
+
+body {
+    padding: 20px;
+    font-family: $font-basic;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+.header__logo {
+    height: 30px;
+    margin: 36px auto 10px auto;
+    display: block;
+}
+
+.main-nav {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        list-style-type: none;
+        padding: 20px;
+    }
+
+    &__item:hover {
+        background-color: $c-primary;
+        .main-nav__link {    
+        color: $c-white;
+    }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $c-primary;
+        font-size: 18px;
+    }
+}
+
+.offer {
+    &__card {
+        position: relative;
+        margin-bottom: 20px;
+
+        &__price {
+            margin: 0;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            padding: 10px;
+            background-color: $c-primary;
+            color: $c-white;
+            font-size: 18px;
+        }
+
+        &:first-child {
+            .offer__card__title {
+                position: absolute;
+                bottom: 59px;
+                left: 20px;
+                color: $c-white;
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            .offer__card__description {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: $c-white;
+                margin: 0;
+            }
+ 
+        }
+        
+        &__title {
+            position: absolute;
+            bottom: 23px;
+            left: 20px;
+            color: $c-white;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+        }    
+          
+        
+    }    
+}
+
+.service {
+    margin: 20px 0;
+    
+    &__card {
+        margin-bottom: 10px;
+        background-color: $c-lightgrey;
+        padding: 20px;
+        display: flex;
+        
+        &__text {
+            flex: 0 0 75%;
+        }
+        
+        &__figure {
+            flex: 0 0 25%;
+            justify-self: center;
+            margin: 0;
+        }
+
+        &__img {
+            height: 40px; 
+            margin-top: 20px;
+        }
+
+        &__title {
+            color: $c-primary;
+            font-size: 18px;
+        }
+
+        &__descrition {
+            font-family: $font-secondary;
+            margin: 0;
+        }
+    
+    }
+
+
+}
+
+.footer {
+    background-color: $c-footer;
+    color: $c-white;
+    text-align: center;
+    height: 60px;
+    vertical-align: center;
+    &__body {
+        margin: 0;
+        padding: 20px; 
+    }
+}

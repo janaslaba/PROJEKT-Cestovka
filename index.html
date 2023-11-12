@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="SCSS/style.scss">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
@@ -18,9 +18,9 @@
     <img class="header__logo" src="IMAGES/logo.svg" alt="Logo">    
 
     <ul class="main-nav">
-        <li class="main-nav__item"><a class="main-nav__link" href="#LastMinute">Last minute</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#LastMinute">Last&nbsp;minute</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#Destinace">Destinace</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Časté otázky</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="#">Časté&nbsp;otázky</a></li>
     </ul>   
     
     </header>
@@ -29,7 +29,7 @@
 
     <section class="offer" id="Destinace">
         <div class="offer__card">
-            <img class="offer__card__image" src="IMAGES/palmy@2x.png" alt="palmy">
+            <img class="offer__card__image" src="IMAGES/palmy.png" alt="palmy">
             <p class="offer__card__price">17 600 Kč</p>
             <h1 class="offer__card__title">Pohoda pod palmami</h1>
             <p class="offer__card__description">Nejlepší dovolená pro nejvíc nejlínější lidi na světě</p>
@@ -49,25 +49,43 @@
     <!--Služby-->
 
     <section class="service" id="Služby">
+        
         <div class="service__card">
-            <img class="service__card__img" src="IMAGES/map.svg" alt="mapa">
-            <p class="service__card__title">Podpora na místě</p>
-            <p class="service__card__description">V cílové destinaci jsou k dispozici naši delegáti, kteří vám vždy rádi poradí.</p>
+            <figure class="service__card__figure">
+                <img class="service__card__img" src="IMAGES/map.svg" alt="mapa">
+            </figure>
+            <div class="service_card_text">
+                <p class="service__card__title">Podpora na místě</p>
+                <p class="service__card__description">V cílové destinaci jsou k dispozici naši delegáti, kteří vám vždy rádi poradí.</p>
+            </div>    
+        </div>
+
+        <div class="service__card">
+            <figure class="service__card__figure">
+                <img class="service__card__img" src="IMAGES/plane.svg" alt="letadlo">    
+            </figure>
+            <div class="service__card__text">
+                <p class="service__card__title">Služby na letišti</p>
+                <p class="service__card__description">Při odletu tam i zpět za vás odbavíme vaše zavadla. Na letišti nebudete čekat.</p>
+            </div>    
         </div>
         <div class="service__card">
-            <img class="service__card__img" src="IMAGES/plane.svg" alt="letadlo">    
-            <p class="service__card__title">Služby na letišti</p>
-            <p class="service__card__description">Při odletu tam i zpět za vás odbavíme vaše zavadla. Na letišti nebudete čekat.</p>
+            <figure class="service__card__figure">
+                <img class="service__card__img" src="IMAGES/globe.svg" alt="zeměkoule">
+            </figure>
+            <div class="service__card__text">
+                <p class="service__card__title">Do celého světa</p> 
+                <p class="service__card__description">Nabízíme pravidelné slevy na vybraných destinací na všech kontinentech.</p> 
+            </div>    
         </div>
         <div class="service__card">
-            <img class="service__card__img" src="IMAGES/globe.svg" alt="zeměkoule">
-            <p class="service__card__title">Do celého světa</p> 
-            <p class="service__card__description">Nabízíme pravidelné slevy na vybraných destinací na všech kontinentech.</p> 
-        </div>
-        <div class="service__card">  
-            <img class="service__card__img" src="IMAGES/shield.svg" alt="štít"> 
-            <p class="service__card__title">Vaše bezpečí</p>
-            <p class="service__card__description">Není-li v cílové destinaci v čase odletu bezpečno, vrátíme vám peníze.</p>
+            <figure class="service__card__figure">
+                <img class="service__card__img" src="IMAGES/shield.svg" alt="štít"> 
+            </figure>
+            <div class="service__card__text">
+                <p class="service__card__title">Vaše bezpečí</p>
+                <p class="service__card__description">Není-li v cílové destinaci v čase odletu bezpečno, vrátíme vám peníze.</p>
+            </div>
         </div> 
     </section>    
     
@@ -80,7 +98,7 @@
         <h2 class="offer__title">Last minute zájezdy</h2>
 
         <div class="offer__card">
-            <img class="offer__card__image" src="IMAGES/lodicka@2x.png" alt="na lodičce">
+            <img class="offer__card__image" src="IMAGES/lodicka.png" alt="na lodičce">
             <p class="offer__card__price">15 900 Kč</p>
             <p class="offer__card__title">Romantika u horského jezera</p>
             <p class="offer__card__description">Dechberoucí výhledy na horské štíty a zrcadlovou hladinu jezera.</p>
