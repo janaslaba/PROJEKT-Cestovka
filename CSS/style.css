@@ -23,11 +23,21 @@ img {
   margin: 36px auto 10px auto;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__logo {
+    flex: 0 0 235px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+}
 
 .main-nav {
   padding: 0;
-  display: flex;
-  justify-content: space-between;
 }
 .main-nav__item {
   list-style-type: none;
@@ -43,8 +53,21 @@ img {
   text-decoration: none;
   color: #F03000;
   font-size: 18px;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .main-nav {
+    display: flex;
+  }
+  .main-nav__item {
+    flex: 1 0 33.3333333333%;
+    text-align: center;
+  }
 }
 
+.offer {
+  /* DOPLNIT TABLETOVOU VERZI U FOTEK*/
+}
 .offer__card {
   position: relative;
   margin-bottom: 20px;
@@ -59,21 +82,6 @@ img {
   color: #FFFFFF;
   font-size: 18px;
 }
-.offer__card:first-child .offer__card__title {
-  position: absolute;
-  bottom: 59px;
-  left: 20px;
-  color: #FFFFFF;
-  font-size: 28px;
-  font-weight: 600;
-}
-.offer__card:first-child .offer__card__description {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #FFFFFF;
-  margin: 0;
-}
 .offer__card__title {
   position: absolute;
   bottom: 23px;
@@ -82,6 +90,33 @@ img {
   font-size: 20px;
   font-weight: 600;
   margin: 0;
+}
+.offer__card__description {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #FFFFFF;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .offer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .offer:first-child {
+    grid-column: 1/span 2;
+    grid-row: 1/2;
+  }
+}
+
+.offer__card:first-child .offer__card__title {
+  position: absolute;
+  bottom: 59px;
+  left: 20px;
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .service {
@@ -112,6 +147,24 @@ img {
 .service__card__descrition {
   font-family: "Open Sans", sans-serif;
   margin: 0;
+}
+
+.news__item {
+  background-color: #F0F0F0;
+  padding: 20px;
+  margin: 10px 0;
+}
+.news__item__date {
+  font-size: 18px;
+  color: #888888;
+  margin: 0;
+}
+.news__item__title {
+  color: #F03000;
+  margin: 10px 0;
+}
+.news__item__description {
+  margin: 10px 0;
 }
 
 .footer {

@@ -31,17 +31,31 @@ img {
     width: 100%;
 }
 
-.header__logo {
-    height: 30px;
-    margin: 36px auto 10px auto;
-    display: block;
+.header {
+
+    &__logo {
+        height: 30px;
+        margin: 36px auto 10px auto;
+        display: block;
+    }    
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: space-between;
+        
+        &__logo {
+            flex: 0 0 235px;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+        }    
+    }
+
 }
 
 .main-nav {
     padding: 0;
-    display: flex;
-    justify-content: space-between;
-
+     
     &__item {
         list-style-type: none;
         padding: 20px;
@@ -49,16 +63,28 @@ img {
 
     &__item:hover {
         background-color: $c-primary;
-        .main-nav__link {    
-        color: $c-white;
-    }
+        .main-nav__link {   
+            color: $c-white;
+        }
     }
 
     &__link {
         text-decoration: none;
         color: $c-primary;
         font-size: 18px;
+        text-align: center;
     }
+
+    @media screen and (min-width:480px) {
+        display: flex;    
+
+        &__item {
+            flex: 1 0 calc(100%/3);  
+            text-align: center;
+            
+        }
+    }    
+
 }
 
 .offer {
@@ -76,27 +102,7 @@ img {
             color: $c-white;
             font-size: 18px;
         }
-
-        &:first-child {
-            .offer__card__title {
-                position: absolute;
-                bottom: 59px;
-                left: 20px;
-                color: $c-white;
-                font-size: 28px;
-                font-weight: 600;
-            }
-
-            .offer__card__description {
-                position: absolute;
-                bottom: 20px;
-                left: 20px;
-                color: $c-white;
-                margin: 0;
-            }
- 
-        }
-        
+      
         &__title {
             position: absolute;
             bottom: 23px;
@@ -106,9 +112,45 @@ img {
             font-weight: 600;
             margin: 0;
         }    
-          
+        &__description {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: $c-white;
+            margin: 0;
+        }
+            
         
     }    
+
+    /* DOPLNIT TABLETOVOU VERZI U FOTEK*/
+
+    @media screen and (min-width:768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+
+        &:first-child {
+            grid-column: 1 / span 2;
+            grid-row: 1 / 2;
+            
+
+        }
+
+    }
+
+}
+
+.offer__card:first-child {
+    .offer__card__title {
+        position: absolute;
+        bottom: 59px;
+        left: 20px;
+        color: $c-white;
+        font-size: 28px;
+        font-weight: 600;
+    }
+         
 }
 
 .service {
@@ -146,6 +188,31 @@ img {
         }
     
     }
+
+
+}
+
+.news {
+    &__item {
+        background-color: $c-lightgrey;
+        padding: 20px;
+        margin: 10px 0;
+
+        &__date {
+            font-size: 18px;
+            color: $c-text-secondary;
+            margin: 0;
+        }
+
+        &__title {
+            color: $c-primary;
+            margin: 10px 0;
+        }
+
+        &__description {
+            margin: 10px 0;
+        }
+    }    
 
 
 }
