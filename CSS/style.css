@@ -15,7 +15,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .header__logo {
@@ -108,6 +108,8 @@ img {
   }
   .offer__card__image {
     height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @media screen and (min-width: 960px) {
