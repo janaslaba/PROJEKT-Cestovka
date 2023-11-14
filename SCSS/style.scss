@@ -61,7 +61,8 @@ img {
         padding: 20px;
     }
 
-    &__item:hover {
+    &__item:hover,
+    &__item:focus {
         background-color: $c-primary;
         .main-nav__link {   
             color: $c-white;
@@ -95,10 +96,7 @@ img {
     &__card {
         position: relative;
         min-height: 150px;
-    
-        & > img {
-            object-fit: cover;
-        }     
+            
 
         &__price {
             margin: 0;
@@ -120,6 +118,7 @@ img {
             font-weight: 600;
             margin: 0;
         }    
+
         &__description {
             position: absolute;
             bottom: 20px;
@@ -137,10 +136,17 @@ img {
             grid-column: 1 / 3;
             grid-row: 1 / 2;
         }
+
+        &__card__image {
+            height: 100%;        
+        }
+        
     }        
 
     @media screen and (min-width:960px) {
         
+        margin-bottom: 50px;
+
         &__card {
             grid-column: 3 / 4;
         }
@@ -188,8 +194,8 @@ img {
             display: block;
             text-align: center;
             
-            &__image {
-                margin: auto;
+        .service__card__img {
+            margin: auto;
             }
         } 
 
@@ -205,8 +211,6 @@ img {
             grid-column: span 1;
 
         }   
-
-        
 
         
         &__text {
@@ -261,7 +265,14 @@ img {
         }
     }    
 
-
+    @media screen and (min-width:960px) {
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        column-gap: 20px;
+        
+    }
 }
 
 .footer {
